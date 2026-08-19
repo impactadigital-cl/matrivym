@@ -110,6 +110,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
 .detail-tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;background:var(--text);color:var(--beige);padding:6px 12px;border-radius:100px;display:inline-block;margin:12px 0}
 .detail-note{font-size:.8rem;color:var(--moss);font-style:italic;display:block;margin-top:12px}
 .big-italic{font-family:'Allura',cursive;font-size:2rem;color:var(--terracotta);margin:12px 0}
+.deadline-badge{display:inline-block;padding:10px 20px;border-radius:100px;background:rgba(194,125,96,.12);color:var(--terracotta);font-weight:500;letter-spacing:.04em;margin:8px 0 18px;border:1px solid rgba(194,125,96,.18)}
 .gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:48px 0 16px}
 .gift-card{background:#fff;border-radius:20px;padding:28px 20px;border:1px solid var(--beige-dark);transition:all .4s;text-align:center}
 .gift-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.06)}
