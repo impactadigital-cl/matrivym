@@ -14,7 +14,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
 .envelope-bg::before{content:'';position:absolute;inset:8%;  background-image:url('assets/matrimonio1.png');background-size:cover;background-position:center top;filter:blur(15px);opacity:.2;z-index:-1}
 .envelope-card{position:relative;z-index:1;max-width:640px;width:95%;text-align:center;animation:floatCard 4s ease-in-out infinite}
 @keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-#envelopeOverlay .envelope-img{border-radius:0;box-shadow:none;margin-bottom:28px;max-height:55vh;width:auto;object-fit:contain}
+#envelopeOverlay .envelope-img{border-radius:0;box-shadow:none;margin-bottom:28px;max-height:55vh;width:auto;max-width:95%;object-fit:contain}
 .envelope-names{font-family:'Allura',cursive;font-size:2.8rem;color:var(--terracotta);margin-bottom:6px}
 .envelope-sub{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);margin-bottom:22px}
 #openInvite{background:var(--terracotta);color:#fff;border-color:var(--terracotta);backdrop-filter:none}

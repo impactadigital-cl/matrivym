@@ -1,5 +1,19 @@
-
 document.addEventListener('DOMContentLoaded', ()=>{
+  // Variables del reproductor (declaradas antes de usarlas)
+  const centeredAudio = document.getElementById('centeredAudio');
+  const playPauseBtn = document.getElementById('playerPlayPause');
+  const volumeSlider = document.getElementById('playerVolume');
+  const volumeIcon = document.getElementById('playerVolumeIcon');
+  const progressTrack = document.getElementById('progressTrack');
+  const progressFill = document.getElementById('progressFill');
+  const progressTime = document.getElementById('progressTime');
+
+  function formatTime(sec){
+    const m = Math.floor(sec/60);
+    const s = Math.floor(sec%60);
+    return `${m}:${String(s).padStart(2,'0')}`;
+  }
+
   // Envelope
   const overlay = document.getElementById('envelopeOverlay');
   const openBtn = document.getElementById('openInvite');
@@ -8,8 +22,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     document.body.style.overflow='auto';
     centeredAudio.src='assets/audio/is-this-love-classical.mp3';
     centeredAudio.volume=0.7;
-    document.getElementById('playerVolume').value=70;
-    document.getElementById('playerVolumeIcon').textContent='🔊';
+    volumeSlider.value=70;
+    volumeIcon.textContent='🔊';
     centeredAudio.play();
   });
   document.body.style.overflow='hidden';
@@ -38,22 +52,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
   setInterval(updateCount,1000); updateCount();
 
-  // Centered Music Player
-  const centeredAudio = document.getElementById('centeredAudio');
-  const playPauseBtn = document.getElementById('playerPlayPause');
-  const volumeSlider = document.getElementById('playerVolume');
-  const volumeIcon = document.getElementById('playerVolumeIcon');
-  const progressTrack = document.getElementById('progressTrack');
-  const progressFill = document.getElementById('progressFill');
-  const progressTime = document.getElementById('progressTime');
-  const centeredTracks = document.querySelectorAll('.player-track');
-
-  function formatTime(sec){
-    const m = Math.floor(sec/60);
-    const s = Math.floor(sec%60);
-    return `${m}:${String(s).padStart(2,'0')}`;
-  }
-
+  // Player controls
   playPauseBtn.addEventListener('click',()=>{
     if(centeredAudio.paused){
       centeredAudio.play();
@@ -85,16 +84,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const rect = progressTrack.getBoundingClientRect();
     const pct = (e.offsetX/rect.width);
     centeredAudio.currentTime = pct * centeredAudio.duration;
-  });
-
-  centeredTracks.forEach(t=>{
-    t.addEventListener('click',()=>{
-      centeredTracks.forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      const id = t.dataset.track;
-      if(id==='1') centeredAudio.src='assets/audio/is-this-love-classical.mp3';
-      else centeredAudio.src='assets/audio/tan-enamorados-piano.mp3';
-      playPauseBtn.textContent='▶';
-    });
   });
 });
