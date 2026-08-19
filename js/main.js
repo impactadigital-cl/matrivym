@@ -85,4 +85,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const pct = (e.offsetX/rect.width);
     centeredAudio.currentTime = pct * centeredAudio.duration;
   });
+
+  // RSVP Confirm Form - Formspree
+  const confirmForm = document.getElementById('rsvpConfirmForm');
+  const formConfirmSuccess = document.getElementById('formConfirmSuccess');
+  
+  if (confirmForm) {
+    confirmForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: {'Accept': 'application/json'}
+      }).then(() => {
+        formConfirmSuccess.textContent = '¡Asistencia confirmada! Te esperamos.';
+        formConfirmSuccess.classList.add('show');
+        form.reset();
+      }).catch(() => {
+        formConfirmSuccess.textContent = 'Error al enviar. Intenta nuevamente.';
+        formConfirmSuccess.classList.add('show');
+      });
+    });
+  }
 });
