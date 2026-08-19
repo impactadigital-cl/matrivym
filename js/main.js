@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   openBtn.addEventListener('click', ()=>{
     overlay.classList.add('open');
     document.body.style.overflow='auto';
-    centeredAudio.src='assets/audio/is-this-love-classical.mp3';
+    centeredAudio.src='assets/audio/YTDown.com_YouTube_Whitesnake-Is-This-Love-Official-Music-V_Media_GOJk0HW_hJw_007_128k.mp3';
     centeredAudio.volume=0.7;
     volumeSlider.value=70;
     volumeIcon.textContent='🔊';
