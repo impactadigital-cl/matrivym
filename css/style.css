@@ -134,4 +134,6 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
 .footer{text-align:center;padding:64px 24px;background:var(--text);color:var(--beige-dark)}
 .footer-names{font-family:'Allura',cursive;font-size:2.4rem;margin-bottom:8px}
 .footer-small{font-size:.65rem;opacity:.5;margin-top:8px;letter-spacing:.08em}
+.footer-link{color:inherit;text-decoration:underline;opacity:.8;transition:opacity .3s}
+.footer-link:hover{opacity:1}
 @media(max-width:900px){.story-grid,.place-grid,.details-grid,.rsvp-grid,.gift-grid{grid-template-columns:1fr}.gift-card.featured{transform:none}.timeline{padding:0}.tl-time{font-size:1.1rem}.tl-icon{font-size:1.3rem;width:26px;height:26px}.paper-card{padding:36px 24px}.section{padding:72px 0}.envelope-card{max-width:90%}@media(min-width:901px){.envelope-card{max-width:640px}}}
