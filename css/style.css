@@ -92,7 +92,7 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
 .itinerary{background:var(--white);padding:140px 0}
 .timeline{max-width:680px;margin:60px auto 0;position:relative;padding:0}
 .timeline::before{content:'';position:absolute;left:56px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--beige-dark),var(--terracotta),var(--beige-dark));border-radius:2px}
-.tl-item{display:flex;align-items:flex-start;gap:24px;margin-bottom:36px;opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.tl-item{display:flex;align-items:flex-start;gap:24px;margin-bottom:60px;opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .tl-item.right{flex-direction:row-reverse}
 .reveal.active .tl-item{opacity:1;transform:none}
 .tl-item:nth-child(1){transition-delay:.1s}.tl-item:nth-child(2){transition-delay:.2s}.tl-item:nth-child(3){transition-delay:.3s}.tl-item:nth-child(4){transition-delay:.4s}.tl-item:nth-child(5){transition-delay:.5s}
