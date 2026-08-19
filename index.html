@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauricio & Valentina — 17.10.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- LOADER ENVELOPE = SOBRE1 -->
+<div id="envelopeOverlay">
+  <div class="envelope-bg"></div>
+  <div class="envelope-card">
+    <img src="assets/img/noviosok.png" alt="Novios" class="envelope-img" id="sobre1">
+    <h2 class="envelope-names">Valentina y Mauricio</h2>
+    <p class="envelope-sub">Tenemos una invitación para ti</p>
+    <button id="openInvite" class="btn btn-ghost">Abrir invitación</button>
+  </div>
+  <div class="birds-container" id="birdsIntro"></div>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-watercolor">
+    <img src="assets/img/vintage_fountain_birds.webp" alt="Pileta con pajaritos acuarela" class="hero-fountain">
+    <div class="birds-flying">
+      <span class="bird b1">›</span><span class="bird b2">›</span><span class="bird b3">›</span><span class="bird b4">›</span>
+    </div>
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">NOS CASAMOS</p>
+    <h1 class="names">Mauricio<br><span class="amp">&</span> Valentina</h1>
+    <p class="hero-date">17 de Octubre • 2026 • Atacama</p>
+    <div class="hero-divider"></div>
+    <p class="hero-quote">El amor no se mira, se siente, y aún más cuando está cerca.</p>
+  </div>
+  <div class="hero-scroll">Desliza</div>
+</header>
+
+<!-- PAPEL ELEGANTE -->
+<section class="section paper-section reveal">
+  <div class="paper-card">
+    <div class="paper-texture"></div>
+    <div class="separator">
+      <img src="assets/separador3.png" alt="separador" class="sep-img">
+      <div class="sep-line"></div>
+    </div>
+    <p class="small-caps">En compañía de nuestros hijos</p>
+    <h3 class="kids-names">Matías y Valentina</h3>
+    <p class="paper-body">tenemos el honor de invitarte con todo nuestro cariño al matrimonio de</p>
+    <h2 class="paper-novios">Mauricio Bugueño Plaza<br>y Valentina Rivera Espina</h2>
+    <div class="paper-line"></div>
+    <p class="paper-footer">Un día para celebrar el amor que nos unió y el futuro que elegimos construir.</p>
+  </div>
+</section>
+
+<!-- REPRODUCTOR CENTRADO -->
+<div class="music-block reveal">
+  <div class="music-block-inner">
+    <p class="music-block-title">Nuestra canción</p>
+      <div class="player-row">
+        <span class="player-track">Is This Love — Versión Clásica</span>
+      </div>
+    <div class="player-controls-row">
+      <button class="player-btn" id="playerPlayPause" type="button">▶</button>
+      <div class="volume-row">
+        <button class="player-btn small" id="playerVolumeIcon" type="button">🔊</button>
+        <input type="range" id="playerVolume" min="0" max="100" value="70">
+      </div>
+      <div class="player-progress">
+        <div class="progress-track" id="progressTrack">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="progress-time" id="progressTime">0:00 / 2:33</span>
+      </div>
+    </div>
+    <audio id="centeredAudio" loop preload="none">
+      <source src="assets/audio/is-this-love-classical.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="separator">
+  <img src="assets/separador3.png" alt="separador" class="sep-img">
+  <div class="sep-line"></div>
+</div>
+
+<!-- HISTORIA -->
+<section class="section story reveal">
+  <div class="container">
+    <span class="section-number">01 — Nuestra Historia</span>
+    <div class="story-grid">
+      <div class="story-text">
+        <h2>Un cruce de miradas<br>en 2019</h2>
+        <p>Nos conocimos en 2019, entre un cruce de miradas que lo cambió todo. Lo que empezó con nervios y risas se transformó, cita tras cita, en esos momentos que llegan para marcar y unir una vida.</p>
+        <p>Vivimos un amor acelerado y verdadero — tan verdadero que muy pronto supimos que seríamos cuatro. Nuestros hijos llegaron para sellar lo que ya sentíamos: que nunca más nos separaríamos.</p>
+        <p class="italic">Y hoy, comienza un nuevo capítulo. El día que diremos sí, para siempre.</p>
+      </div>
+      <div class="story-image">
+        <img src="assets/libro.png" alt="Libro" class="floating-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUENTA REGRESIVA -->
+<section class="section countdown-section reveal">
+  <div class="container center">
+    <div class="separator">
+      <img src="assets/separador3.jpeg" alt="separador" class="sep-img">
+      <div class="sep-line"></div>
+    </div>
+    <h2 class="serif-title">Falta muy poco</h2>
+    <p class="subtitle">17 de Octubre de 2026 — Atacama</p>
+    <div class="countdown" id="countdown">
+      <div><span id="days">00</span><small>DÍAS</small></div>
+      <div><span id="hours">00</span><small>HORAS</small></div>
+      <div><span id="minutes">00</span><small>MIN</small></div>
+      <div><span id="seconds">00</span><small>SEG</small></div>
+    </div>
+    <div class="calendar-actions">
+      <button class="btn btn-ghost" id="btnGoogleCal">Agregar a Google Calendar</button>
+      <button class="btn btn-ghost" id="btnAppleCal">Agregar a iPhone Calendar</button>
+    </div>
+  </div>
+</section>
+
+<!-- LUGAR -->
+<section class="section place reveal">
+  <div class="container place-grid">
+    <div class="place-img-wrap">
+      <img src="assets/img/atacama_desert_ceremony.webp" alt="Centro de Eventos San Pablo">
+    </div>
+    <div class="place-info">
+      <span class="section-number">02 — Lugar</span>
+      <h2>Centro de Eventos<br>San Pablo</h2>
+      <p class="place-address">Los Carrera 5548<br>Región de Atacama, Chile</p>
+      <p>Un espacio entre muros de barro y cielo abierto, con luces cálidas y aroma a desierto. Ahí nos diremos el sí.</p>
+      <a href="https://maps.google.com/?q=Los+Carrera+5548+Atacama" target="_blank" class="btn btn-ghost">📍 Ver en mapa</a>
+    </div>
+  </div>
+</section>
+
+<div class="separator">
+  <img src="assets/separador3.png" alt="separador" class="sep-img">
+  <div class="sep-line"></div>
+</div>
+
+<!-- ITINERARIO -->
+<section class="section itinerary reveal">
+  <div class="container">
+    <h2 class="serif-title center">Itinerario</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-left"><span class="tl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 22h12v-2H6v2zm6-20L4 6v6c0 4 2.6 7.6 6 9 3.4-1.4 6-5 6-9V6L12 2z"/></svg></span><span class="tl-time">19:00</span></div><div class="tl-content"><h4>Misa</h4><p>Ceremonia de unión</p></div></div>
+      <div class="tl-item right"><div class="tl-left"><span class="tl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21c5.52 0 9-3.98 9-8v-.5c0-1.24-.45-2.39-1.2-3.29l1.14-5.02c.12-.51-.17-1.03-.68-1.15-.51-.12-1.03.17-1.15.68l-.97 3.23c-.3-.06-.6-.1-1.08-.1 0-1.01-.08-2.02-.22-3.01-.12-.83-.97-1.37-1.8-1.17-.83.2-1.37.97-1.17 1.8.2 1 .59 1.91 1.15 2.72-.96.55-1.97 1.23-2.99 2.07.12.31.34.57.57.81l1.08 1.08c-1.19.74-2.09 1.77-2.61 2.99-.12.27-.21.55-.31.82-.59-1.16-1.43-2.19-2.51-3.05l-.98-.76c-.47-.36-1.15-.2-1.39.28-.24.49-.08 1.11.26 1.39l1.02.85c-.02.13-.04.26-.04.39v.5c0 4.02 3.48 7.5 9 7.5zm0-2c-4.03 0-7-2.69-7-6.02 0-.11.02-.22.05-.33.7.38 1.54.64 2.45.73.07.5 1.63 2.85 2.55 3.6.99-.22 1.9-.63 2.72-1.13.31-.18.59-.4 1.42-1 1.05.69 2.25 1.11 3.49 1.11.81 0 1.57-.12 2.26-.33.18.72.28 1.47.28 2.25 0 2.33-2.3 4.22-5.5 4.22z"/></svg></span><span class="tl-time">19:30</span></div><div class="tl-content"><h4>Cóctel de Bienvenida</h4><p>Brindis bajo las luces</p></div></div>
+      <div class="tl-item"><div class="tl-left"><span class="tl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2l3 3-8 8-3-3 8-8h2zm2 5l-7 7-2-2 7-7 2 2zm0 9h-2v2h2c1.1 0 2-.9 2-2v-4h-2v4zm-4 0c0 1.1-.9 2-2 2h-3l-2 3v-8h5c1.1 0 2-.9 2-2h2v8zm-8 2c-.55 0-1 .45-1 1v3l2 3h6v-2H9v-3c-1.1 0-2-.9-2-2v-2H2v6c0 1.1.9 2 2 2h6v-2H7v-2c0-1.1-.9-2-2-2z"/></svg></span><span class="tl-time">20:00</span></div><div class="tl-content"><h4>Cena</h4><p>Compartiendo la mesa</p></div></div>
+      <div class="tl-item"><div class="tl-left"><span class="tl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 1.66 1.34 3 3 3h6c1.66 0 3-1.34 3-3v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7S6 6.14 6 10c0 2.38.9 4.47 2 6.05C6.99 14.95 6 13.6 6 12c0-2.5 1.5-4.65 3.71-5.61C10.7 5.14 11.36 4 12 4c.64 0 1.3.14 1.9.39C16.5 5.35 18 7.5 18 10c0 2.38-.7 4.5-1.93 6.07.87-.17 1.68-.73 2.35-1.52.42-.5.7-1.1.84-1.79L18 12h2c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-2c0-2.21-1.79-4-4-4S7 4.79 7 7H5c0 1.1-.9 2-2 2v3c0 1.1.9 2 2 2h4c0-1.34.67-2.5 1.66-3.27-.28-.5-.44-1.07-.44-1.73 0-1.34 1.06-2.44 2.41-2.44 1.35 0 2.45 1.09 2.45 2.44 0 .66-.16 1.22-.44 1.73.99.77 1.66 1.93 1.66 3.27v5c0 1.1.9 2 2 2s2-.9 2-2V10c0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.55.82 2.86 2.04 3.67-.22.16-.42.38-.54.63-.12-.1-.26-.19-.39-.26l-.01.01c-.84-.54-1.44-1.48-1.6-2.59-.08-.57-.13-1.15-.13-1.74 0-2.5 1.5-4.65 3.71-5.61C12.3 5.14 12.66 4 13.36 4c.64 0 1.3.14 1.9.39C18.5 5.35 20 7.5 20 10c0 1.55-.82 2.86-2.04 3.67.22.16.42.38.54.63.12-.1.26-.19.42-.27.75-.5 1.46-1.11 2 .79 1.74 0 3.96-.88 5.11-2.28.38-.41.71-.85.92-1.32.06-.12.12-.25.15-.38.78-1.62 1.15-3.46 1.06-5.41-.86-.67-1.86-1.08-2.96-1.16h-.03c-.28 0-.56-.02-.84-.05-1.68-.16-3.17-.82-4.38-1.77-.28.68-.55 1.33-.74 2.02-.6-.28-1.23-.52-1.87-.69-.03-.01-.06-.03-.09-.04-.27-.08-1.53-.04-2.79.93-1.48 1.09-1.52 2.66-1.34 3.64.13.66.38 1.29.75 1.83-1.06.46-1.96.72-3 1.06-.12.04-.23.08-.35.12-.42.14-.83.3-1.21.49C7.14 11.35 7 12.15 7 13c0 1.34.4 2.59 1.09 3.64-.26.32-.55.64-.88.91-2.83-1.22-4.49-3.9-4.49-7.04 0-2.84 1.55-5.32 3.95-6.61C5.97 6.15 6 5.76 6 5.35 6 4.21 6.92 2 9 2c1.24 0 2.37.55 3.11 1.42.55-.85 1.18-1.6 1.91-2.17C13.01 1.14 11.59 0 10 0 5.58 0 2 3.58 2 8c0 2.42 1.05 4.59 2.69 6.24-.66.68-1.22 1.47-1.69 2.37C1.95 15.01 1 13.62 1 12c0-3.31 2.15-6.08 5.17-7.01A7.06 7.06 0 0112 2z"/></svg></span><span class="tl-time">21:00</span></div><div class="tl-content"><h4>Inicio de Fiesta</h4><p>Hasta que los pies digan basta</p></div></div>
+      <div class="tl-item"><div class="tl-left"><span class="tl-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm0-11c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"/></svg></span><span class="tl-time">03:00</span></div><div class="tl-content"><h4>Cierre</h4><p>Con el corazón lleno</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="separator">
+  <img src="assets/separador3.png" alt="separador" class="sep-img">
+  <div class="sep-line"></div>
+</div>
+
+<!-- DRESSCODE + NO NIÑOS -->
+<section class="section details reveal">
+  <div class="container details-grid">
+    <div class="detail-card">
+      <img src="assets/img/invitados.png" alt="Invitados" class="detail-img">
+      <h3>Dress Code</h3>
+      <p class="detail-tag">Formal / Gala</p>
+      <p>Queremos verte elegante, con tu mejor versión. Te pedimos evitar el color blanco, reservado para la novia.</p>
+      <span class="detail-note"></span>
+    </div>
+    <div class="detail-card soft" style="text-align:center">
+      <h3>Un detalle importante</h3>
+      <p class="big-italic">Celebración solo para adultos</p>
+      <p>Amamos a los pequeños de la familia con todo el corazón. Para que todos puedan disfrutar y celebrar con tranquilidad, hemos decidido que esta sea una celebración sin niños.</p>
+      <p>Agradecemos tu comprensión y cariño.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REGALOS -->
+<section class="section gifts reveal">
+  <div class="container center">
+    <span class="section-number">03 — Regalos</span>
+    <h2 class="serif-title">Tu presencia es nuestro regalo</h2>
+    <p class="subtitle">Si deseas acompañarnos con un gesto, aquí tienes opciones</p>
+    <div class="gift-grid">
+      <div class="gift-card">
+        <div class="gift-img"><img src="FLORES/sobreceleste.png" alt="Sobre Celeste"></div>
+        <h4>Sobre Celeste</h4>
+        <span class="price">CLP $60.000</span>
+        <a href="https://www.flow.cl/btn.php?token=gd51ee856507476fa0d16e291de4baf3f0f740dd" target="_blank" class="btn btn-ghost btn-pay">Regalar</a>
+      </div>
+      <div class="gift-card featured">
+        <div class="gift-img"><img src="FLORES/3.png" alt="Sobre Rosa"></div>
+        <h4>Sobre Rosa</h4>
+        <span class="price">CLP $100.000</span>
+        <a href="https://www.flow.cl/btn.php?token=w339d547ca2a2611f952650ae54828c57f26ea1d" target="_blank" class="btn btn-filled btn-pay">Regalar</a>
+      </div>
+      <div class="gift-card">
+        <div class="gift-img"><img src="FLORES/sobreblanco.png" alt="Sobre Blanco"></div>
+        <h4>Sobre Blanco</h4>
+        <span class="price">CLP $150.000</span>
+        <a href="https://www.flow.cl/btn.php?token=q2cc8e277dd0f6cdb2f263f6c8d9fe265e5c80db" target="_blank" class="btn btn-ghost btn-pay">Regalar</a>
+      </div>
+    </div>
+    <p class="gift-note">Al hacer click te llevaremos a nuestro link de pago seguro. Gracias por tu cariño.</p>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="section rsvp reveal" id="rsvp">
+  <div class="container rsvp-grid">
+    <div class="rsvp-info">
+      <h2 class="serif-title">Confirma tu<br>asistencia</h2>
+      <p class="subtitle">Fecha límite: 30 de Septiembre 2026</p>
+      <p>Tu confirmación nos ayuda a preparar cada detalle con amor. Déjanos un mensaje, una foto o un video para ese día.</p>
+      <div class="rsvp-mini">
+        <img src="assets/img/vintage_fountain_birds.webp" alt="">
+      </div>
+    </div>
+    <form class="rsvp-form" id="rsvpForm">
+      <label>Nombre completo<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+      <label>¿Nos acompañas?
+        <select name="asistencia" required>
+          <option value="">Selecciona</option>
+          <option value="Sí, con alegría">Sí, con alegría</option>
+          <option value="No podré asistir">No podré asistir</option>
+        </select>
+      </label>
+      <label>Número de acompañantes<input type="number" name="acompanantes" min="0" max="3" value="0"></label>
+      <label>Mensaje para los novios<textarea name="mensaje" rows="4" placeholder="Escribe unas palabras, un recuerdo, un deseo..."></textarea></label>
+      <label class="file-label">Sube una foto o video para los novios (opcional)
+        <input type="file" name="archivo" id="fileInput" accept="image/*,video/*">
+        <span class="file-preview" id="filePreview">Ningún archivo seleccionado</span>
+      </label>
+<button type="submit" class="btn btn-filled btn-submit">Enviar confirmación</button>
+    <p class="form-success" id="formSuccess"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="footer-names">M & V</p>
+  <p>Con amor, Mauricio & Valentina • 17.10.2026 • Atacama</p>
+  <p class="footer-small">Diseño premium por ImpactaDigital • Hecho con cariño y acuarela</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
