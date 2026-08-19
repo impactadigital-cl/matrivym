@@ -218,39 +218,23 @@
 <!-- RSVP -->
 <section class="section rsvp reveal" id="rsvp">
   <div class="container">
-    <div class="rsvp-grid">
-      <div class="rsvp-message">
-        <h2 class="serif-title">Envía un mensaje<br>para los novios</h2>
-        <p class="subtitle"><span class="subtitle-badge">Adjunta una imagen o video para felicitarlos en su día</span></p>
-        <form class="rsvp-form" id="rsvpMessageForm">
-          <label>Nombre completo<input type="text" name="nombre" required placeholder="Tu nombre"></label>
-          <label>Mensaje para los novios<textarea name="mensaje" rows="4" placeholder="Escribe unas palabras, un recuerdo, un deseo..."></textarea></label>
-          <label class="file-label">Sube una foto o video (opcional)
-            <input type="file" name="archivo" id="fileInputMsg" accept="image/*,video/*">
-            <span class="file-preview" id="filePreviewMsg">Ningún archivo seleccionado</span>
-          </label>
-          <button type="submit" class="btn btn-filled btn-submit">Enviar mensaje</button>
-          <p class="form-success" id="formMsgSuccess"></p>
-        </form>
-      </div>
-      <div class="rsvp-confirm">
-        <h2 class="serif-title">Confirma tu<br>asistencia</h2>
-        <p class="subtitle"><span class="deadline-badge">Fecha límite: 30 de Septiembre 2026</span></p>
-        <form class="rsvp-form" id="rsvpConfirmForm">
-          <label>Nombre completo<input type="text" name="nombre" required placeholder="Tu nombre"></label>
-          <label>¿Nos acompañas?
-            <select name="asistencia" required>
-              <option value="">Selecciona</option>
-              <option value="Sí, con alegría">Sí, con alegría</option>
-              <option value="No podré asistir">No podré asistir</option>
-            </select>
-          </label>
-          <label>Nombre acompañante<input type="text" name="acompanante" placeholder="Nombre del acompañante"></label>
-          <label>Número de teléfono<input type="tel" name="telefono" placeholder="+56 9 1234 5678"></label>
-          <button type="submit" class="btn btn-filled btn-submit">Confirmar asistencia</button>
-          <p class="form-success" id="formConfirmSuccess"></p>
-        </form>
-      </div>
+    <div class="rsvp-confirm">
+      <h2 class="serif-title">Confirma tu<br>asistencia</h2>
+      <p class="subtitle"><span class="deadline-badge">Fecha límite: 30 de Septiembre 2026</span></p>
+      <form class="rsvp-form" id="rsvpConfirmForm">
+        <label>Nombre completo<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+        <label>¿Nos acompañas?
+          <select name="asistencia" required>
+            <option value="">Selecciona</option>
+            <option value="Sí, con alegría">Sí, con alegría</option>
+            <option value="No podré asistir">No podré asistir</option>
+          </select>
+        </label>
+        <label>Nombre acompañante<input type="text" name="acompanante" placeholder="Nombre del acompañante"></label>
+        <label>Número de teléfono<input type="tel" name="telefono" placeholder="+56 9 1234 5678"></label>
+        <button type="submit" class="btn btn-filled btn-submit">Confirmar asistencia</button>
+        <p class="form-success" id="formConfirmSuccess"></p>
+      </form>
     </div>
   </div>
 </section>
