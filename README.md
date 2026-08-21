@@ -41,10 +41,8 @@ parte_matrimonio_premium/
 - Scroll reveal, float animations, blur glass
 
 ## Para conectar formulario real
-Edita js/main.js:
-- Opción 1: Formspree -> cambia URL en fetch
-- Opción 2: EmailJS
-- Opción 3: Google Apps Script que reenvíe a impactadigital.cl@gmail.com con archivo adjunto
+Actualmente el formulario RSVP envía los datos por **Formspree** al endpoint `https://formspree.io/f/mkjwkppg`.
+No tiene otras salidas de correo configuradas.
 
 ## Audio
 Agrega tus mp3 en assets/audio/ y el player los reproducirá en loop. Por copyright no incluí los tracks originales.
